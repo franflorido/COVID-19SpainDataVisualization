@@ -33,13 +33,15 @@ svg
 
 // 50 pixel max radius, we could calculate it relative to width and height
 
+const calculateMaxAffected = (dataset:ResultEntry[]) => {
+  return dataset.reduce(
+    (max, item) => (item.value > max ? item.value : max),
+    0
+  );
+};
+
 const updateChart = (dataset: ResultEntry[]) => {
-  const calculateMaxAffected = (dataset) => {
-    return dataset.reduce(
-      (max, item) => (item.value > max ? item.value : max),
-      0
-    );
-  };
+  
   const maxAffected = calculateMaxAffected(dataset);
 
   const affectedRadiusScale = d3
@@ -52,7 +54,7 @@ const updateChart = (dataset: ResultEntry[]) => {
     dataset: ResultEntry[]
   ) => {
     const entry = dataset.find((item) => item.name === comunidad);
-    return entry ? affectedRadiusScale(entry.value) : 0;
+    return entry ? affectedRadiusScale(entry.value) + 5 : 0;
   };
 
   svg.selectAll("circle").remove();

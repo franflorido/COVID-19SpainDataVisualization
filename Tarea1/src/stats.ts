@@ -78,7 +78,6 @@ export const stats: ResultEntry[] = [
   },
 ];
 
-
 export const stats_1: ResultEntry[] = [
   { name: "Andalucía", value: 6392 },
   { name: "Aragón", value: 2491 },
@@ -89,7 +88,7 @@ export const stats_1: ResultEntry[] = [
   { name: "Castilla La Mancha", value: 7047 },
   { name: "Castilla y León", value: 6847 },
   { name: "Cataluña", value: 19991 },
-  { name: "Ceuta y Melilla", value: 51 },
+  { name: "Ceuta y Melilla", value: 1000 },
   { name: "Valencia", value: 5922 },
   { name: "Extremadura", value: 1679 },
   { name: "Galicia", value: 4432 },
