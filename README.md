@@ -17,7 +17,7 @@ After getting the data I had to do some data cleaning in order to get them in th
 
 COVID-19SpainDataVisualization/Tarea1/JSONcleaning.ipynb
 
-After cleaning the data we can start with the visualization.
+After cleaning the data we can start performing the visualization.
 
 The first thing you have to do is to create a project folder containing the following files and directories:
 
@@ -77,6 +77,7 @@ Once we have everything we needed installed, let´s create the required files in
   </body>
 </html>
 ```
+
 
 ### src/communities.ts:
 
