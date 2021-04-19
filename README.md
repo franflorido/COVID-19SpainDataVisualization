@@ -70,18 +70,17 @@ Once we have everything we needed installed, let´s create the required files in
   </head>
   <body>
     <div>
-      <button id="initial">Show initial stats</button>
-      <button id="final">Show final stats</button>
+      <button id="Results2020">Results2020</button>
+      <button id="Results2021">Results2021</button>
     </div>
     <script src="./index.ts"></script>
   </body>
 </html>
 ```
-
+As you can see the buttons are inserter inside the body function.
 
 ### src/communities.ts:
 
-The COVID-19 cases have been obtained from the following resource: https://www.eldiario.es/sociedad/mapa-datos-coronavirus-espana-comunidades-autonomas-abril-12_1_1039633.html
 
 ```typescript
 export const latLongCommunities = [
@@ -320,7 +319,7 @@ We will use Spain topojson info: https://github.com/deldersveld/topojson/blob/ma
 
 Let's copy it under the following route _./src/spain.json_
 
-- Now we will import all the required dependencies into _index.ts_:
+- Now we will import all the dependencies into _index.ts_:
 
 _./src/index.ts_
 
@@ -334,7 +333,7 @@ import { stats, stats_1, ResultEntry } from "./stats";
 
 ```
 
-- Let's build the map::
+- After importing the dependences we are goin to buil the map::
 
 _./src/index.ts_
 
@@ -369,9 +368,7 @@ svg
   .attr("d", geoPath as any);
 ```
 
-At this point, the map has been created. 
-
-First we are going to create a funcion that updates the chart every time we click the button with update chart and inside it we are going to create some funcitons in order to visualice the data according to the button clicked:
+Now that we have the map we are going to create a funcion that updates the chart every time we click the button with "updateChart" and inside it we are going to create some funcitons in order to visualice the data according to the button clicked:
 
 ```typescript
 const updateChart = (dataset: ResultEntry[]) => {
@@ -408,3 +405,4 @@ const updateChart = (dataset: ResultEntry[]) => {
     .attr("cy", (d) => aProjection([d.long, d.lat])[1]);
 };
 ```
+With this done we have completed the essay! Feel free to try it and make changes!
