@@ -293,7 +293,7 @@ export const stats_1: ResultEntry[] = [
   { name: "Islas Canarias", value: 6838 },
   { name: "Islas Baleares", value: 1960 },
 ];
-
+```
 ### src/map.css:
 
 We will create two classes:
@@ -314,7 +314,7 @@ We will create two classes:
   fill: #f88f70;
   fill-opacity: 0.7;
 }
-
+```
 We will use Spain topojson info: https://github.com/deldersveld/topojson/blob/master/countries/spain/spain-comunidad-with-canary-islands.json
 
 Let's copy it under the following route _./src/spain.json_
