@@ -373,7 +373,7 @@ svg
 ```typescript
 const updateChart = (dataset: ResultEntry[]) => {
 ```
-### First we calculate the max cases given the year we have clicked in and we are going to scale the radius of each circunference
+- First we calculate the max cases given the year we have clicked in and we are going to scale the radius of each circunference
 
 ```typescript
   const maxAffected = calculateMaxAffected(dataset);
@@ -391,7 +391,7 @@ const updateChart = (dataset: ResultEntry[]) => {
     return entry ? affectedRadiusScale(entry.value) + 5 : 0;
   };
 ```
-### Now we are going to print the circles in the map 
+- Now we are going to print the circles in the map 
 ```typescript
   svg.selectAll("circle").remove();
   svg
@@ -405,7 +405,7 @@ const updateChart = (dataset: ResultEntry[]) => {
     .attr("cy", (d) => aProjection([d.long, d.lat])[1]);
 };
 ```
-### And to sumb up we are going to declare de buttons instance
+- And to sumb up we are going to declare de buttons instance
 ```typescript
 document
   .getElementById("Results2020")
