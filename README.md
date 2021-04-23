@@ -333,7 +333,7 @@ import { stats, stats_1, ResultEntry } from "./stats";
 
 ```
 
-- After importing the dependences we are goin to buil the map::
+- After importing the dependences we are goin to buil the map:
 
 _./src/index.ts_
 
