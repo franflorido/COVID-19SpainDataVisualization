@@ -77,7 +77,7 @@ Once we have everything we needed installed, let´s create the required files in
   </body>
 </html>
 ```
-As you can see the buttons are inserter inside the body function.
+As you can see the buttons are inserted inside the body function.
 
 ### src/communities.ts:
 
@@ -348,7 +348,7 @@ const geoPath = d3.geoPath().projection(aProjection);
 const geojson = topojson.feature(spainjson, spainjson.objects.ESP_adm1);
 );
 ```
-Now let's create the map:
+- Now let's create the map:
 
 ```typescript
 const svg = d3
@@ -368,7 +368,7 @@ svg
   .attr("d", geoPath as any);
 ```
 
-Now that we have the map we are going to create a funcion that updates the chart every time we click the button with "updateChart" and inside it we are going to create some funcitons in order to visualice the data according to the button clicked:
+- Now that we have the map we are going to create a funcion that updates the chart every time we click the button with "updateChart" and inside it we are going to create some funcitons in order to visualice the data according to the button clicked:
 
 ```typescript
 const updateChart = (dataset: ResultEntry[]) => {
@@ -391,7 +391,7 @@ const updateChart = (dataset: ResultEntry[]) => {
     return entry ? affectedRadiusScale(entry.value) + 5 : 0;
   };
 ```
-# Now we are going to print the circles in the map 
+### Now we are going to print the circles in the map 
 ```typescript
   svg.selectAll("circle").remove();
   svg
@@ -405,7 +405,7 @@ const updateChart = (dataset: ResultEntry[]) => {
     .attr("cy", (d) => aProjection([d.long, d.lat])[1]);
 };
 ```
-# An to sumb up we are going to declare de buttons instance
+### And to sumb up we are going to declare de buttons instance
 ```typescript
 document
   .getElementById("Results2020")
