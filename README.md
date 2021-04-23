@@ -323,7 +323,7 @@ Let's copy it under the following route _./src/spain.json_
 
 _./src/index.ts_
 
-```diff
+```typescript
 import * as d3 from "d3";
 import * as topojson from "topojson-client";
 const spainjson = require("./spain.json");
