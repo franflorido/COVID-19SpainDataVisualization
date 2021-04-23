@@ -405,4 +405,19 @@ const updateChart = (dataset: ResultEntry[]) => {
     .attr("cy", (d) => aProjection([d.long, d.lat])[1]);
 };
 ```
+# An to sumb up we are going to declare de buttons instance
+```typescript
+document
+  .getElementById("Results2020")
+  .addEventListener("click", function handleResults() {
+    updateChart(stats);
+  });
+
+document
+  .getElementById("Results2021")
+  .addEventListener("click", function handleResults() {
+    updateChart(stats_1);
+  });
+```
+
 With this done we have completed the essay! Feel free to try it and make changes!
